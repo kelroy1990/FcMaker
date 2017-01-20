@@ -3,9 +3,10 @@
 
 using namespace std;
 
-void message::printMessage(){
-  cout <<"Makefile example\n";
+void message::printMessage() {
+  cout << "Makefile example\n";
 }
-message::message(){
+
+message::message() {
   cout << "construct\n";
-};
+}

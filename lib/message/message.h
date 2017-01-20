@@ -2,11 +2,10 @@
 #define MESSAGE_H
 
 class message {
-
 public:
+
   void printMessage();
   message();
-
 };
 
-#endif
+#endif // ifndef MESSAGE_H
