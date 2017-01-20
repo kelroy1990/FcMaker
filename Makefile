@@ -4,7 +4,7 @@ output: main.o message.o
 main.o: main.cpp
 	g++ -c main.cpp
 
-message.o: message.cpp
+message.o: lib/message/message.cpp
 	g++ -c message.cpp
 clean:
 	rm *.o Salida

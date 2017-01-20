@@ -1,11 +1,10 @@
 #include <iostream>
 #include <cstdlib>
-#include "message.h"
+#include "lib/message/message.h"
 
 using namespace std;
 message m;
-int main(){
+int main() {
   cout << "Primer aviso\n";
   m.printMessage();
-
 }
