@@ -1,9 +1,13 @@
-LIBS = `pkg-config --libs gtk+-3.0`
+PKGS=gtk+-3.0 glib-2.0 gmodule-2.0
+CFLAGS=-g3 `pkg-config --cflags $(PKGS)`
+LDLIBS=`pkg-config --libs $(PKGS)`
+CC=gcc
 
-CFLAGS = `pkg-config --cflags gtk+-3.0`
+main: main.o callbacks.o
+	$(CC) -o $@ $^ $(LDLIBS)
 
-output: main.o
-	g++ main.o -o Salida
+#Comando de compilacion
+#gcc `pkg-config --cflags gtk+-3.0` -o main main.cpp `pkg-config --libs gtk+-3.0` -export-dynamic
 
 
 #output: main.o jugador.o message.o
